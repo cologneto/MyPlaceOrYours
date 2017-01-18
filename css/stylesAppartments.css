@@ -1,0 +1,240 @@
+body {
+	background-color: #dcd9db;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+}
+
+
+@import url(../fonts/286113f7f49cc7f348402a12c2419ed9);
+@font-face {
+    font-family: "Tw Cen MT";
+    src: url("../fonts/286113f7f49cc7f348402a12c2419ed9.eot");
+    src: url("../fonts/286113f7f49cc7f348402a12c2419ed9.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.woff2") format("woff2"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.woff") format("woff"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.ttf") format("truetype"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.svg#Tw Cen MT") format("svg");
+}
+
+
+#close {
+	width: 5.5vh;
+	height: 5.5vh;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#leftSide {
+	width: 37.5%;
+}
+
+#rightSide {
+	width: 37.5%;
+}
+
+#center {
+	width: 25%;
+	height: 100vh;
+	border-right: 0.1vh solid black;
+}
+
+#textContainer {
+	background-color: #636363;
+	font-family: "Tw Cen MT";
+	font-size: 2vh;
+	padding: 0 4vh;
+}
+
+#textContainer div, #textContainer p {
+	color: #dcd9db;
+	line-height: 1.44;
+}
+
+#textContainer p {
+	margin:0;
+	padding: 0;
+	font-size: 1.5vh;
+}
+
+#textContainer p:last-child {
+	padding-bottom: 3vh;
+}
+ 
+#textContainer .header {
+	font-size: 5.55vh;
+	padding-top: 2vh;
+}
+
+
+#textContainer .street {
+	font-size: 3vh;
+	text-align: right;
+	margin: 0 4vw 2vh 0;
+
+}
+
+.floatLeft {
+	float: left;
+}
+
+.noPaddingLeftRight {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.picContainer {
+	width: 33.333333333%;
+	float: left;
+	border-right: 0.1vh solid black;
+	height: 100vh;
+}
+
+.pic1, .pic2, .pic3, .pic6, .pic7, .pic8 {
+	width: 100%;
+	background-size: 100% 100%;
+}
+
+.pic4, .pic5 {
+	width: 50%;
+}
+
+.pic1 {
+	height: 45vh;
+	background-image: url("../images/AppartmentOne/1st-upper-photo.jpg");
+}
+
+.pic2 {
+	height: 73.5vh;
+	background-image: url("../images/AppartmentOne/2nd-upper-photo.jpg");
+}
+
+.pic3 {
+	height: 70vh;
+	background-image: url("../images/AppartmentOne/3rd-upper-photo.jpg");
+}
+
+.pic4 {
+	height: 28.5vh;
+	background-image: url("../images/AppartmentOne/4th-upper-photo.jpg");
+}
+
+.pic5 {
+	height: 24.5vh;
+	background-image: url("../images/AppartmentOne/5th-upper-photo.jpg");
+}
+
+.pic6 {
+	height: 44.25vh;
+	background-image: url("../images/AppartmentOne/6th-upper-photo.jpg");
+}
+
+.pic7 {
+	height: 59vh;
+	background-image: url("../images/AppartmentOne/7th-upper-photo.jpg");
+}
+
+.pic8 {
+	height: 55.5vh;
+	background-image: url("../images/AppartmentOne/8th-upper-photo.jpg");
+}
+
+.smallPicsContainer {
+	width: 12.5%;
+	float: left;
+}
+
+
+
+
+.sPic1,
+.sPic2,
+.sPic3,
+.sPic4,
+.sPic5,
+.sPic6,
+.sPic7,
+.sPic8 {
+	height: 2.77vh;
+}
+
+.sPic1 {
+	background-image: url("../images/AppartmentOne/1st-upper-photo.jpg");
+}
+
+.sPic2 {
+	background-image: url("../images/AppartmentOne/2nd-upper-photo.jpg");
+}
+
+.sPic3 {
+	background-image: url("../images/AppartmentOne/3rd-upper-photo.jpg");
+}
+
+.sPic4 {
+	background-color: #636363;
+}
+
+.sPic5 {
+	background-color: #636363;
+}
+
+.sPic6 {
+	background-image: url("../images/AppartmentOne/6th-upper-photo.jpg");
+}
+
+.sPic7 {
+	background-image: url("../images/AppartmentOne/7th-upper-photo.jpg");
+}
+
+.sPic8 {
+	background-image: url("../images/AppartmentOne/8th-upper-photo.jpg");
+}
+
+.rectangle1, .rectangle2, .rectangle3, .rectangle4,
+.rectangle5, ..rectangle6, .rectangle7, .rectangle8, {
+	width: 100%;
+}
+
+.rectangle1 {
+	height: 4.16vh;
+	background-color: #b7b7b7;
+}
+
+.rectangle2 {
+	height: 3.7vh;
+	background-color: #a1a1a1;
+} 
+
+.rectangle3 {
+	height: 2.3vh;
+	background-color: #b7b7b7;
+} 
+
+.rectangle4 {
+	height: 1.4vh;
+	background-color: #a1a1a1;
+} 
+
+.rectangle5 {
+	height: 2.3vh;
+	background-color: #b7b7b7;
+} 
+
+.rectangle6 {
+	height: 1.4vh;
+	background-color: #a1a1a1;
+} 
+
+.rectangle7 {
+	height: 2.77vh;
+	background-color: #b7b7b7;
+} 
+
+.rectangle8 {
+	height: 2.3vh;
+	background-color: #a1a1a1;
+}

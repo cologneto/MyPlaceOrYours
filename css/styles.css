@@ -1,0 +1,953 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*End of css styles for reset*/
+
+
+@import url(../fonts/286113f7f49cc7f348402a12c2419ed9);
+@font-face {
+    font-family: "Tw Cen MT";
+    src: url("../fonts/286113f7f49cc7f348402a12c2419ed9.eot");
+    src: url("../fonts/286113f7f49cc7f348402a12c2419ed9.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.woff2") format("woff2"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.woff") format("woff"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.ttf") format("truetype"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.svg#Tw Cen MT") format("svg");
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Tw Cen MT";
+	overflow-x: hidden;
+}
+
+section {
+	width: 100%;
+	height: 111vh;
+}
+
+video {
+	width: 100%;
+	z-index: -1000;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	/*background-color: black;*/
+	z-index: 10000;
+}
+
+#logo {
+    width: 27.14vw;
+    height: auto;
+    opacity: 0.6;
+    /*position: absolute;
+    top: 12%;
+    left: 33%;*/
+    color: white;
+    z-index: 1000;
+}
+
+#homeButton {
+	width: 80px;
+	height: 60px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#book {
+    font-family: 'Tw Cen MT';
+    font-weight: bold;
+    margin: auto;
+    font-size: 24px;
+    background-color: #464646;
+    position: fixed;
+    right:0;
+    top:0;
+    color: #a6a6a6;
+    padding: 13px 30px;
+}
+
+#howToFindUs {
+  display: block;
+  position: relative; 
+}
+
+#menu-button {
+    /*position: fixed;
+    top: 0;
+    right: 0;*/
+    padding-top: 10px;
+    margin-left: -28px;
+    padding-left: 23px; 
+    width: 80px;
+    height: 60px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+
+#navigation {
+    margin: auto;
+    display: block;
+    font-family: 'Tw Cen MT';
+    font-size: 24px;
+    /*font-size: 1.8vw;*/
+    color: #a6a6a6;
+    padding-top: 12px;
+    position: absolute;
+    top:0;
+    margin-left: 33%;
+}
+
+#navigation > ul > li {
+    float: left;
+    margin-right: 20px;
+    list-style-type: none;
+}
+/*a {
+    color: inherit;
+    text-decoration: none;
+}*/
+
+#aboutSection {
+	position: relative;
+	width: 100%;
+	padding-left: 4.947vw;
+	height: 111vh;
+}
+
+#ourApartments {
+	background-color: #dcd9db;
+	
+}
+
+
+
+.blackBackground {
+    background-color: black;
+    height: 60px;
+}
+
+.homeContainer {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin-top: 26.38vh;
+    height: 84.62vh;
+}
+
+/*a:hover {
+    color: white;
+    z-index: 1000000;
+    text-decoration: none;
+    cursor: pointer;
+}*/
+
+a.nav-link:link
+{
+   color: #a6a6a6;
+   text-decoration: none;
+}
+a.nav-link:visited
+{
+    color: #a6a6a6;
+    text-decoration: none;
+}
+a.nav-link:hover
+{
+   color: white;
+   text-decoration: none;
+}
+a.nav-link:active
+{
+   color: white;
+   text-decoration: none;
+}
+
+.rightNavigation {
+    height: 60px;
+    width: 300px;
+    position: fixed;
+    top:0;
+    right: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #8d8d8d;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+ /* in case your dealing with a block element apply this to the element itself */
+.centerBlock {
+    display: table;
+    margin: auto;
+}
+
+.slideDown {
+    font-family: 'Tw Cen MT';   
+    /*position: absolute; 
+    bottom: 0;
+    left: 15px; */
+    height: 14.35vh; 
+    width: 101%;  
+    font-size: 1.944vh;
+    color: white;
+}
+
+.slideDownImage {
+  margin-top: -2vw;
+}
+
+.slideDownImage img {
+  width: 2.7vw;
+  height: auto;
+}
+
+.chevron {
+	margin: auto;
+  position: relative;
+  text-align: center;
+  padding: 1vh;
+  margin-bottom: 6px;
+  height:2px;
+  width: 4vw;
+}
+
+.chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 51%;
+  background: white;
+  -webkit-transform: skew(0deg, 12deg);
+  -moz-transform: skew(0deg, 12deg);
+  -ms-transform: skew(0deg, 12deg);
+  -o-transform: skew(0deg, 12deg);
+  transform: skew(0deg, 12deg);
+}
+.chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10%;
+  width: 50%;
+  background: white;
+  -webkit-transform: skew(0deg, -12deg);
+  -moz-transform: skew(0deg, -12deg);
+  -ms-transform: skew(0deg, -12deg);
+  -o-transform: skew(0deg, -12deg);
+  transform: skew(0deg, -12deg);
+}​
+
+.marginTop {
+	margin-top: -20px;
+}
+
+.triangle {
+	width: 100%;
+	position: absolute;
+	bottom: -1px;
+}
+
+.triangleDown {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 50vw 11vh 50vw;
+	border-color: transparent transparent white transparent;
+
+}
+
+.triangleMarginLeft {
+	margin-left: -51%;
+  float: left;
+}
+
+.triangleMarginRight {
+	margin-left: 49%;
+}
+
+.overflowHidden {
+	overflow: hidden;
+}
+
+.marginTopScroll {
+	margin-top: 13vh;
+}
+
+.femaleTourist {
+	position: absolute;
+	top: 12vh;
+	z-index: 1000;
+
+}
+
+.femaleTourist img {
+	height: 83.962vh;
+	width: auto;
+	/*opacity: 0.9;*/
+	margin-left: -1.302vw;
+}
+
+.map {
+	position: absolute;
+	z-index: 999;
+	top: 2.24vh;
+}
+
+.map img {
+	width: 44vw;
+	height: 92vh;
+	margin-top:5vh;
+
+}
+
+.aboutSectionText {
+	font-size: 2.2222vh;
+	line-height: 1.8vh;
+	font-family: 'Tw Cen MT';
+	margin: 25vh -9.84vw;
+	letter-spacing: 0.05vw;
+}
+
+.aboutSectionText h2 {
+	font-size: 5.5555vh;
+	margin-bottom: 8.33vh;
+	color: #707070;
+}
+
+.noPaddingLeft {
+	padding-left: 0 !important;
+}
+
+.photoGirl {
+	position: absolute;
+	right: 0;
+	bottom: 8vh;
+}
+
+.photoGirl img {
+	width: 9.406vw;
+	height: auto;
+}
+
+.popUpText {
+	font-family: 'Tw Cen MT';
+	font-size: 1.666vh;
+	line-height: 0.8;
+	position: absolute;
+	bottom: 20vh;
+	right: 12vw;
+	text-align: right;
+}
+
+.colorBlack::before {
+	background-color: black;
+}
+
+.colorBlack::after {
+	background-color: black;
+}
+
+.chevronBlack {
+	margin-top: -5vw;
+	margin-left: -4.68vw;
+	left: -5vw;
+}
+
+.marginLeft {
+	margin-left: -6vw;
+}
+
+/*For triangles About section*/
+.triangleDownAbout {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8.9vh 50vw 0 50vw;
+	border-color: white transparent transparent transparent;
+}
+
+
+.conHeight {
+  height: 100vh;
+}
+
+.img2 {
+  margin-top: -1vh;
+}
+
+.aboutTriangleColor {
+  border-color: transparent transparent #dcd9db transparent;
+}
+
+.marginAbout {
+  margin-left: -5%;
+  width: 101%
+}
+
+
+/*=======================================*/
+/*======== OUR APARTMENTS STYLES =======*/
+/*======================================*/
+/*
+#ourApartments > .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}*/
+
+.rightColumn, .leftColumn {
+	position: relative;
+	margin-right: -15px;
+  	margin-left: -15px;
+}
+
+.rightColumn {
+	
+}
+
+.leftColumn {
+
+}
+
+.apartmentThree, .apartmentTwo, .apartmentOne,
+.vases, .vase, .vasesAndDoors {
+	background-size: 100% 100%;
+}
+
+.apartmentThree {
+	width: 50vw;
+	height: 45.46vh;
+	background-image: url('../images/homePage/ap3negative.jpg');
+}
+
+.apartmentTwo {
+	width: 51.19vw;
+	height: 55.54vh;
+	background-image: url('../images/homePage/ap2negative.jpg');
+}
+
+.apartmentOne {
+	margin-left: 20px;
+	width: 50vw;
+	height: 61.11vh;
+	background-image: url('../images/homePage/ap1negative.jpg');
+}
+
+.vases {
+  position: relative;
+  display: inline-block;
+	margin-left: 20px;
+	width: 100%;	
+}
+
+.vases .apartmentText {
+  z-index: 100;
+}
+
+/*.relativePosition > div {
+	position: absolute;
+}*/
+
+.vase {
+	margin: auto;
+	height: 32vh;
+	width: 11vw;
+	background-image: url("../images/homePage/vaseNebgative.jpg");
+}
+
+.vasesAndDoors {
+	width: 15vw;
+	height: 41vh;
+  margin-top: -1vh;
+  margin-left: 8vw;
+	background-image: url("../images/homePage/doorAndFlowersNegative.jpg");
+}
+
+.button {
+	font-family: "Tw Cen MT";
+	font-size: 3vh;
+	color:white;
+	width: 14.16vw;
+	text-align: center;
+	padding: 1vh 0.1vw;
+	background-color: #790000;
+	margin: auto;
+  z-index: 1000 !important;
+  position: relative;
+}
+
+.button:hover {
+  color: #790000;
+  background-color: white;
+  cursor: pointer;
+}
+
+.blackOpacity {
+	width: 100%;
+	height: 100%;
+	background-color: none;
+	/*opacity: 0.8;*/
+}
+
+.blackOpacity:hover {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.blackOpacity:hover .apartmentText {
+  color: white;
+}
+
+.blackOpacity:hover .specialBorderRectangle {
+  z-index: 300;
+}
+
+.blackOpacity:hover .stepIn {
+  background-color: rgba(0,0,255,0.9);
+}
+
+.relativePosition {
+	position: relative;
+}
+.apartmentText {
+	position: absolute;
+	font-family: "Tw Cen MT";
+	line-height: 1;
+	color: black;
+  left: 3.9vw;
+}
+
+.apartmentText span {
+	font-size: 4.8vh;
+}
+
+.apartmentText p {
+	font-size: 2.9vh;
+}
+
+.apartmentThree .apartmentText {
+  top: 37vh;
+}
+
+.apartmentTwo .apartmentText {
+  top: 2vh;
+}
+
+.apartmentOne .apartmentText {
+  top: 50vh;
+  left: 29vw; 
+}
+
+.apartmentOne .apartmentText p {
+  text-align: right;
+}
+
+.apartmentThree::after {
+  content: "";
+  border-bottom: 5px solid red;
+}
+
+.specialBorderRectangleAp3 {
+  width: 98.3%;
+  height: 104%;
+  position: absolute;
+  border: 8px solid #dcd9db;
+  border-width: 0 8px 8px 0;
+  z-index: 199;
+}
+
+.specialBorderRectangleAp2 {
+  width: 96%;
+  height: 100%;
+  position: absolute;
+  border: 8px solid #dcd9db;
+  border-width: 0 8px 0 0;
+  z-index: 199;
+}
+
+.specialBorderRectangleOurAp {
+  width: 96%;
+  height: 100%;
+  position: absolute;
+  top: -2vh;
+ /* border: 8px solid #dcd9db;
+  border-width: 8px 8px 0 0;*/
+  z-index: 199;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangleSmall {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3vh;
+  height: 9vh;
+  background-color: #dcd9db;
+}
+
+.rectangleSmallUpLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3vh;
+  height: 3vh;
+  background-color: #dcd9db;
+}
+
+.rectangleSmallUpBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 0;
+  border: 8px solid #dcd9db;
+  border-width: 8px 0 0 0;
+}
+
+.rectangleSmallUpRight {
+   position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 20%;
+  border: 8px solid #dcd9db;
+  border-width: 0 8px 0 0;
+}
+
+.rectangleSmallDownRight {
+  position: absolute;
+  bottom: -2vh;
+  right: 0;
+  width: 0;
+  height: 20%;
+  border: 8px solid #dcd9db;
+  border-width: 0 8px 0 0;
+}
+
+.rectangleSmallDownRightTwo {
+  position: absolute;
+  bottom: -2vh;
+  right: 24.5%;
+  width: 0;
+  height: 10%;
+  border: 8px solid #dcd9db;
+  border-width: 0 8px 0 0;
+}
+
+.stepIn {
+  height: 6vh;
+  width: 8vw;
+  position: absolute;
+  background-color: black;
+  font-family: "Tw Cen MT";
+  font-size: 3vh;
+  color: white;
+  text-align: center;
+  padding-top: 0.8vh;
+}
+
+.stepIn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+
+}
+
+.ap3stepIn {
+  z-index: 1000;
+  right: 5vw;
+  top: 38vh;
+}
+
+.ap2stepIn {
+  z-index: 1000;
+  right: 5vw;
+  top: 48vh;
+}
+
+.ap1stepIn {
+  z-index: 1000;
+  left: 5vw;
+  top: 51vh;
+}
+
+
+.triangleDownOurAp {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50vw 10vh 50vw;
+    border-color: transparent transparent #666666 transparent;
+}
+/*=====================================================*/
+/*================ How to find us styles ==============*/
+/*=====================================================*/
+
+
+#howToFindUs .femaleTourist {
+  left: 2vw;
+}
+
+#howToFindUs .femaleTourist img{
+  width: 16vw;
+  height: 57vh;
+  
+}
+
+#howToFindUs .map {
+  top: 30vh;
+}
+
+#howToFindUs .map img {
+  width: 27vw;
+  height: 48vh;
+}
+
+.HtfuTextContainer {
+  color: white;
+  line-height: 0.8;
+  font-family: "Tw Cen MT";
+  font-size: 2.5vh;
+  margin-top: 11vh; 
+}
+
+.HtfuTextContainer span {
+  font-size: 5vh;
+}
+
+#integratedMap {
+  width: 100%;
+  height: 43vh;
+}
+
+.htfu {
+  font-size: 5.5vh;
+}
+
+.mapsAndDirections {
+  font-size: 3vh;
+  margin-left: 11vw;
+}
+
+.abc {
+  color: #bdbdbd;
+}
+
+.triangleDownHTFU {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50vw 10vh 50vw;
+  border-color: transparent transparent #555555 transparent;
+}
+/*=====================================================*/
+/*==================== Contact Us =====================*/
+/*=====================================================*/
+
+#contactUs {
+  font-family: "Tw Cen MT";
+  padding-top:  5vh;
+}
+
+.bookATransfer, .expandable {
+  color: #ffffff;
+  font-size: 5vh;
+}
+
+.line {
+  float: left;
+  height: 0.2vh;
+  width: 42vw;
+  background-color: #ffffff;
+  margin-top: 4vh;
+  position: relative;
+  margin-left: -3vw;
+}
+
+.expandable {
+  position: absolute;
+  right: -6vh;
+  top: -3vh;
+  height: 6vh;
+  width: 6vh;
+  border: 0.3vh solid #ffffff;
+  border-radius: 3vh;
+}
+
+.expandable div {
+  text-align: center;
+  margin-top: -0.5vh;
+}
+
+.expandable:hover {
+  cursor: pointer;
+}
+
+.bookATransferForm {
+  color: #ffffff;
+  font-size: 2.5vh;
+}
+
+.formCol {
+  width: 9.4vw;
+  float: left;
+  margin-right: 3vw;
+}
+
+.formCol input {
+  width: 90%
+  
+}
+
+.marginBottom4vh {
+  margin-bottom: 4vh;
+}
+
+.marginTop4vh {
+  margin-top: 4vh;
+}
+
+.form-group input  {
+  color: #555555;
+  font-size: 2vh;
+  height: 6vh;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+  padding-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+.clear button, .send button {
+  background-color: #555555;
+  border: 0.7vh solid #ffffff;
+  padding: 1vh 3vh;
+}
+
+.triangleDownBookT {
+   width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50vw 10vh 50vw;
+  border-color: transparent transparent #363636 transparent;  
+}
+
+.lastTriangleContainer {
+  height: 11vh;
+  width: 102%;
+}
+
+
+.contactUs {
+  height: 91vh;
+  width: 100vw;
+  background-image: url(../images/homePage/contactUsBg.jpg);
+  background-size: 100% 100%;
+  padding-top: 10vh;
+}
+
+.contactUs input, .message textarea, .send button {
+  font-size: 3vh;
+}
+
+.nameAndPhone input, .email input, .message textarea {
+  width: 21vw;
+  padding: 1vh 3vh;
+}
+
+.nameAndPhone input:first-child {
+  margin-right: 3vw;
+}
+
+.email input, .message textarea {
+  width: 45.2vw;
+}
+
+.nameAndPhone, .email, .message {
+  margin: 4vh 0;
+}
+
+.send button {
+  background-color:#363636;
+  color: #ffffff;
+  padding: 0.5vh 8vh;
+}
