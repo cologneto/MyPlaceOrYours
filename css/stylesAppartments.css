@@ -82,6 +82,10 @@ section {
 	float: left;
 }
 
+.positionAbsolute {
+	position: absolute;
+}
+
 .noPaddingLeftRight {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -147,9 +151,6 @@ section {
 	width: 12.5%;
 	float: left;
 }
-
-
-
 
 .sPic1,
 .sPic2,
@@ -238,3 +239,179 @@ section {
 	height: 2.3vh;
 	background-color: #a1a1a1;
 }
+
+.downArrowsContainer {
+	position: absolute;
+	bottom: 3vh;
+	left: 0;
+	width: 100%;
+}
+
+.arrow {
+	margin: auto;
+	height: 5vh;
+	width: 5vh;
+}
+
+.arr {
+	height: 33%;
+	width: 100%;
+	background-image: url("../images/homePage/slideDown.png");
+	background-size: 100% 100%;
+	margin-bottom: -0.5vh;
+	cursor: pointer; 
+}
+
+.padding8 {
+	padding: 0 12.4vw;
+}
+
+.bigImage {
+	width: 100%;
+	height: 100vh;
+	background-size: 100% 100%;
+	background-image: url("../images/AppartmentOne/photo-1.jpg");
+}
+
+.thinVerticalLineCupboard, .thinVerticalLineBarChair {
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	width: 0.08vw;
+}
+
+.positionRelative {
+	position: relative;
+}
+
+#bigImageContainer .thinVerticalLineCupboard {
+	left: 14.5vw;
+	height: 11.5vh;
+}
+
+#bigImageContainer .thinVerticalLineBarChair {
+	left: 36vw;
+	height: 6vh;
+}
+
+
+
+/*===========================*/
+/*MOVING FURNITURE CONTAINER*/
+/*===========================*/
+
+#movingFurnitureContainer .thinVerticalLineCupboard {
+	top:0;
+	left: 14.5vw;
+	height: 26.5vh;
+	background-color: #7d7c7d !important;
+}
+
+#movingFurnitureContainer .cupboard {
+	left: 10vw;
+	top: 29vh;
+	width:  8vw;
+	height: 35vh;
+	background-image: url("../images/AppartmentOne/cupboard.png");
+	background-size: 100% 100%;
+}
+
+#movingFurnitureContainer .thinVerticalLineBarChair {
+	top:0;
+	left: 36vw;
+	height: 34.5vh;
+	background-color: #7d7c7d !important;
+}
+
+#movingFurnitureContainer .barChair1 {
+	left: 35vw;
+	top: 35vh;
+	width:  8vw;
+	height: 35vh;
+	background-image: url("../images/AppartmentOne/bar-chair-1.png");
+	background-size: 100% 100%;
+}
+
+#movingFurnitureContainer .barChair2 {
+	left: 26vw;
+	top: 50vh;
+	width:  8vw;
+	height: 35vh;
+	background-image: url("../images/AppartmentOne/bar-chair-2.png");
+	background-size: 100% 100%;
+}
+
+
+
+#movingFurnitureContainer .image {
+	top: 5vh;
+	right: 10vw;
+	width: 42vw;
+	height: 49vh;
+	background-image: url("../images/AppartmentOne/photo-2.jpg"); 
+	background-size: 100% 100%;
+}
+
+#movingFurnitureContainer .image .thinLinesContainer {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.thinVerticalLineChair {
+	left: 20%;
+	bottom: 0;
+	width: 0.08vw;
+	height: 15%;
+	background-color: #dcd9db;
+}
+
+
+/*707070*/
+
+.thinVerticalLineChair2 {
+	left: 20%;
+	bottom: -10%;
+	width: 0.08vw;
+	height: 10%;
+	background-color: #707070;
+}
+
+.horisontalLineChair {
+	left: 20%;
+	bottom: -10%;
+	width: 65%;
+	height: 0.08vw;
+	background-color: #707070;
+}
+
+.thinVerticalLineChair3 {
+	left: 85%;
+	bottom: -20%;
+	width:  0.08vw;
+	height: 10%;
+	background-color: #707070;
+}
+
+.chair {
+	left: 75%;
+	bottom: -80%;
+	width:  14.8vw;
+	height: 30vh;
+	background-image: url("../images/AppartmentOne/chair.png");
+	background-size: 100% 100%;
+}
+
+.smallDetailsText {
+	left: 0%;
+	bottom: -40%;
+	font-family: "Tw Cen MT";
+	font-size: 4.7vh;
+	color: #636363;
+}
+
+
+
+/*=================================*/
+/*END OF MOVING FURNITURE CONTAINER*/
+/*=================================*/
