@@ -47,3 +47,50 @@
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
+
+.smallPicsContainer.open-add,
+.smallPicsContainer.open-remove {
+
+    transition: all 1s;
+}
+
+.smallPicsContainer.open-add-active {
+    top: 0;
+    left: 0;
+}
+
+.arrow {
+  -webkit-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  filter: brightness(50%);
+  animation: paddingTop 1s infinite;
+  animation-delay: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes paddingTop {
+  to { padding-top: 1vh; }
+}
+
+.arr {
+  animation: movingDown 1s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.arr:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+
+.arr:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+
+.arr:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes movingDown {
+  to { margin-bottom: -0.1vh; }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title>Apartment One</title>
@@ -7,42 +7,15 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/stylesAppartments.css">
 </head>
-<body>
+<body ng-controller="AppartmentController" scroll>
 	<div class="navbar-fixed-top">
-		<div id="close">X</div>		
+		<div id="close" ng-click="toggleTopMenu()">X</div>		
 		<div class="container-fluid fixsPic1edNavigation">
+		<!-- ng-class="{'open' : toggle}" -->
 			<div class="row">
-				<div class="smallPicsContainer">
-					<div class="sPic1"></div>
-					<div class="rectangle1"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic2"></div>
-					<div class="rectangle2"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic3"></div>
-					<div class="rectangle3"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic4"></div>
-					<div class="rectangle4"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic5"></div>
-					<div class="rectangle5"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic6"></div>
-					<div class="rectangle6"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic7"></div>
-					<div class="rectangle7"></div>
-				</div>
-				<div class="smallPicsContainer">
-					<div class="sPic8"></div>
-					<div class="rectangle8"></div>
+				<div class="smallPicsContainer" ng-repeat="number in numbersArray" >
+					<div class="sPic{{number}}"></div>
+					<div class="rectangle{{number}}"></div>
 				</div>
 			</div>
 		</div>
@@ -53,6 +26,7 @@
 				<div id="leftSide" class="floatLeft">
 					<div class="picContainer">
 						<div class="pic1"></div>
+						<div class="testContainer"></div>
 					</div>
 					<div class="picContainer">
 						<div class="pic2"></div>
@@ -146,9 +120,25 @@
 
 			</div>
 		</section>
-		<section></section>
+		<section>
+			<div id="picAndSliderContainer" class="row positionRelative">
+				<div class="freeBreakfastImageAndButton positionRelative">
+					<div class="fbSlider positionAbsolute">
+						<div class="sliderImages"></div>
+					</div>
+					<div class="fbButton positionAbsolute">
+						Free breakfast and parking if you book directly on this website!
+					</div>
+					<div class="imageRight positionAbsolute"></div>
+				</div>
+			</div>
+		</section>
 	</div>
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<!-- https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js -->
+	<script src="js/angular.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
