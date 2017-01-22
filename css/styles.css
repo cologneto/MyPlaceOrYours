@@ -99,11 +99,26 @@ header {
     z-index: 1000;
 }
 
+.homeTriangleColor {
+  border-color: transparent transparent white transparent;
+}
+
 #homeButton {
-	width: 80px;
+	/*width: 80px;
 	height: 60px;
 	padding-top: 10px;
-	text-align: center;
+	text-align: center;*/
+
+  width: 8.5vh;
+  height: 6.5vh;
+  padding-top: 1vh;
+  text-align: center;
+}
+
+
+#homeButton a img {
+  width: 4.5vh;
+  height: auto; 
 }
 
 #book {
@@ -227,10 +242,14 @@ a.nav-link:active
 }
 
 .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
+    /*width: 35px;
+    height: 5px;*/
+    width: 4.5vh;
+    height: 0.5vh;
     background-color: #8d8d8d;
-    margin: 6px 0;
+    margin: 0.9vh 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -339,6 +358,17 @@ a.nav-link:active
 .triangleMarginRight {
 	margin-left: 49%;
 }
+
+
+.homeTriangleMarginLeft {
+  margin-left: -46%;
+  float: left;
+}
+
+.homeTriangleMarginRight {
+  margin-left: 54%;
+}
+
 
 .overflowHidden {
 	overflow: hidden;
@@ -951,3 +981,27 @@ a.nav-link:active
   color: #ffffff;
   padding: 0.5vh 8vh;
 }
+
+.downArrowsContainer {
+  position: absolute;
+  bottom: 3vh;
+  left: 0;
+  width: 100%;
+}
+
+.arrow {
+  padding-top: 0;
+  margin: auto;
+  height: 5vh;
+  width: 5vh;
+}
+
+.arr {
+  height: 33%;
+  width: 100%;
+  background-image: url("../images/homePage/slideDown.png");
+  background-size: 100% 100%;
+  margin-bottom: -0.5vh;
+  cursor: pointer; 
+}
+

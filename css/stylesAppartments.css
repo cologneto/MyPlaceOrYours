@@ -324,6 +324,11 @@ section {
 	height: 6vh;
 }
 
+.chairAnimationStart {
+	position: absolute;
+	top:25vh;
+	left:0;
+}
 
 /*==========================================*/
 /*====== END OF BIG IMAGE CONTAINER ========*/

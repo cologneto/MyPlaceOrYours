@@ -3,7 +3,7 @@ var app = angular.module('app', ["ngAnimate"]);
 app.directive("scroll", function ($window) {
     return function(scope, element, attrs) {
     	var ofsetTop = $(".arrow").offset().top,
-    		movingPicsSt = $("#bigImageContainer .thinVerticalLineCupboard").offset().top,
+    		movingPicsSt = $(".chairAnimationStart").offset().top,
     		movingPicsSt2 = $("#picAndSliderContainer").offset().top,
     		lastScrollTop = 0;
     	var cupboardTop = $(".cupboard"),
@@ -46,7 +46,7 @@ app.directive("scroll", function ($window) {
 		    	  	barChair1.css("top", parseInt(barChair1.css("top")) - 5);
 		    	  	barChair2.css("top", parseInt(barChair2.css("top")) - 5);
 		    	  	thinLineBarChair.css("height", parseInt(thinLineBarChair.css("height")) - 5);
-		    	  	chair.css("top", parseInt(chair.css("top")) + 7);
+		    	  	chair.css("top", parseInt(chair.css("top")) + 2);
 
 			    }  else{
 			        // upscroll cod
@@ -55,7 +55,7 @@ app.directive("scroll", function ($window) {
 		    	  	thinLineBarChair.css("height", parseInt(thinLineBarChair.css("height")) + 5);
 	    	  		barChair1.css("top", parseInt(barChair1.css("top")) + 5);
 	    	  		barChair2.css("top", parseInt(barChair2.css("top")) +7);
-	    	  		chair.css("top", parseInt(chair.css("top")) - 7);
+	    	  		chair.css("top", parseInt(chair.css("top")) - 2);
 			    }
              } else {
              	cupboardTop.css("top", cupboardTopSP);
