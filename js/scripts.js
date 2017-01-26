@@ -185,14 +185,14 @@ var jsonObj = [
   }
 ];  
 
-function myFunction(x) {
+function ShowHideMenuNavigation(x) {
     x.classList.toggle("change");
-    $("#navigation").toggle("blackBackground");
-    if ($("#menu").hasClass("blackBackground")) {
-        $("#menu").removeClass("blackBackground");
+    $(".navMenuContainer").toggle("hidden");
+    if ($(".navMenuContainer").hasClass("hidden")) {
+        $(".navMenuContainer").removeClass("hidden");
     }
     else {
-       $("#menu").addClass("blackBackground"); 
+       $(".navMenuContainer").addClass("hidden"); 
     }
 }
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
     e.preventDefault();
 
     $("body, html").animate({ 
-      scrollTop: $(this).attr('href').offset().top 
+      scrollTop: $( $(this).attr('href') ).offset().top 
     }, 600);
 
   });

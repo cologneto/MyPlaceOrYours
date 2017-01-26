@@ -10,6 +10,9 @@
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
+    margin-left: 100vw;
+    width: 0;
+    height: 0;
     -ms-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -22,6 +25,9 @@
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+    margin-left:0;
+    width: 44vw;
+    height: 91vh;
   }
 }
 @keyframes rotating {
@@ -31,6 +37,9 @@
     -webkit-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
+    margin-left: 100vw;
+    width: 0;
+    height: 0;
   }
   to {
     -ms-transform: rotate(360deg);
@@ -38,14 +47,17 @@
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+    margin-left:0;
+    width: 44vw;
+    height: 91vh;
   }
 }
 .rotating {
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite;
+  -webkit-animation: rotating 3s linear 1;
+  -moz-animation: rotating 3s linear 1;
+  -ms-animation: rotating 3s linear 1;
+  -o-animation: rotating 3s linear 1;
+  animation: rotating 3s linear 1;
 }
 
 .smallPicsContainer.open-add,
@@ -93,4 +105,156 @@
 
 @keyframes movingDown {
   to { margin-bottom: -0.1vh; }
+}
+
+@keyframes flash{
+  50% {
+    background-color: white;
+  }
+
+  70% {
+    background-color: black;
+  }
+}
+
+.flashingAnimation {
+  -webkit-animation: flash 1s linear 1;
+  -o-animation: flash 1s linear 1;
+  animation: flash 1s linear 1;
+}
+
+@keyframes textShow {
+  1% {
+    opacity: 1;
+    -webkit-transform:  scale(10);
+    -ms-transform:  scale(10);
+    -o-transform:  scale(10);
+    transform:  scale(10);
+  }
+  10% {
+    -webkit-transform:  scale(1);
+    -ms-transform:  scale(1);
+    -o-transform:  scale(1);
+    transform:  scale(1);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.textAnimation {
+  -webkit-animation: textShow 5s linear 1;
+  -o-animation: textShow 5s linear 1;
+  animation: textShow 5s linear 1;
+}
+
+
+
+@-webkit-keyframes photo /* Safari and Chrome */ {
+  from {
+    margin-right: -9vw;
+  }
+  50% {
+    margin-right:0;
+    width: 10vw;
+  }
+ 
+
+  to {
+    margin-right: -9vw;
+  }
+}
+  @keyframes photo {
+  from {
+    margin-right: -9vw;
+  }
+ 
+  50% {
+    margin-right:0;
+  }
+
+  to {
+    margin-right: -9vw;
+  }
+}
+
+  .photoAnimation {
+  -webkit-animation: photo 1.8s  linear 1;
+  -moz-animation: photo 1.8s  linear 1;
+  -ms-animation: photo 1.8s linear 1;
+  -o-animation: photo 1.8s  linear 1;
+  animation: photo 1.8s linear 1;
+}
+
+
+@keyframes apart3 {
+  from {background-image: url('../images/homePage/ap3negative.jpg');}
+  to {background-image: url('../images/homePage/ap3.jpg');}
+}
+
+@keyframes apart2 {
+  from {background-image: url('../images/homePage/ap2negative.jpg');}
+  to {background-image: url('../images/homePage/ap2.jpg');}
+}
+
+@keyframes apart1 {
+  from {background-image: url('../images/homePage/ap1negative.jpg');}
+  to {background-image: url('../images/homePage/ap1.jpg');}
+}
+
+@keyframes vase1 {
+  from {background-image: url("../images/homePage/vaseNebgative.jpg");}
+  to {background-image: url("../images/homePage/vase.jpg");}
+}
+
+@keyframes vase2 {
+  from {background-image: url("../images/homePage/doorAndFlowersNegative.jpg");}
+  to {background-image: url("../images/homePage/doorAndFlowers.jpg");}
+}
+
+.vaseAnimation1 {
+  -webkit-animation: vase1 2s linear 1;
+  -o-animation: vase1 2s linear 1;
+  animation: vase1 2s linear 1;
+}
+
+.vaseAnimation2 {
+  -webkit-animation: vase2 2s linear 1;
+  -o-animation: vase2 2s linear 1;
+  animation: vase2 2s linear 1;
+}
+
+.apartAnimation1 {
+  -webkit-animation: apart1 2s linear 1;
+  -o-animation: apart1 2s linear 1;
+  animation: apart1 2s linear 1;
+}
+
+.apartAnimation2 {
+  -webkit-animation: apart2 2s linear 1;
+  -o-animation: apart2 2s linear 1;
+  animation: apart2 2s linear 1;
+}
+
+.apartAnimation3 {
+  -webkit-animation: apart3 2s linear 1;
+  -o-animation: apart3 2s linear 1;
+  animation: apart3 2s linear 1;
+}
+
+
+
+
+@keyframes textAnim {
+  from {color: black;}
+  to {color: white}
+}
+
+.textAnimation {
+  -webkit-animation: textAnim 2s linear 1;
+  -o-animation: textAnim 2s linear 1;
+  animation: textAnim 2s linear 1;
 }
