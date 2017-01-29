@@ -124,6 +124,7 @@ section {
 .pic4, .pic5 {
 	width: 50%;
 	display: none;
+	background-size: 100% 100%;
 }
 
 .pic1 {

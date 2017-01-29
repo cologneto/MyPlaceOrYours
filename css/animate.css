@@ -157,36 +157,53 @@
   from {
     margin-right: -9vw;
   }
+
+  10%{margin-right:0;}
+
   50% {
-    margin-right:0;
-    width: 10vw;
+    
+    /*width: 10vw;*/
   }
- 
+   90%{
+    margin-right:0;
+   }
 
   to {
     margin-right: -9vw;
   }
 }
   @keyframes photo {
-  from {
+   from {
     margin-right: -9vw;
   }
- 
-  50% {
-    margin-right:0;
+
+  25%{margin-right:0;}
+  48%{ /*width: 9.406vw; */
+    opacity: 1;
   }
+  50% {
+    opacity: 0.5;
+    /*width: 10vw;*/
+  }
+  55%{ /*width: 9.406vw;*/ 
+    opacity: 1;
+  }
+   90%{
+    margin-right:0;
+   }
 
   to {
+    /*width: 0;*/
     margin-right: -9vw;
   }
 }
 
   .photoAnimation {
-  -webkit-animation: photo 1.8s  linear 1;
-  -moz-animation: photo 1.8s  linear 1;
-  -ms-animation: photo 1.8s linear 1;
-  -o-animation: photo 1.8s  linear 1;
-  animation: photo 1.8s linear 1;
+  -webkit-animation: photo 3s  linear 1;
+  -moz-animation: photo 3s  linear 1;
+  -ms-animation: photo 3s linear 1;
+  -o-animation: photo 3s  linear 1;
+  animation: photo 3s linear 1;
 }
 
 
@@ -216,33 +233,33 @@
 }
 
 .vaseAnimation1 {
-  -webkit-animation: vase1 2s linear 1;
-  -o-animation: vase1 2s linear 1;
-  animation: vase1 2s linear 1;
+  -webkit-animation: vase1 4s linear 1;
+  -o-animation: vase1 4s linear 1;
+  animation: vase1 4s linear 1;
 }
 
 .vaseAnimation2 {
-  -webkit-animation: vase2 2s linear 1;
-  -o-animation: vase2 2s linear 1;
-  animation: vase2 2s linear 1;
+  -webkit-animation: vase2 4s linear 1;
+  -o-animation: vase2 4s linear 1;
+  animation: vase2 4s linear 1;
 }
 
 .apartAnimation1 {
-  -webkit-animation: apart1 2s linear 1;
-  -o-animation: apart1 2s linear 1;
-  animation: apart1 2s linear 1;
+  -webkit-animation: apart1 4s linear 1;
+  -o-animation: apart1 4s linear 1;
+  animation: apart1 4s linear 1;
 }
 
 .apartAnimation2 {
-  -webkit-animation: apart2 2s linear 1;
-  -o-animation: apart2 2s linear 1;
-  animation: apart2 2s linear 1;
+  -webkit-animation: apart2 4s linear 1;
+  -o-animation: apart2 4s linear 1;
+  animation: apart2 4s linear 1;
 }
 
 .apartAnimation3 {
-  -webkit-animation: apart3 2s linear 1;
-  -o-animation: apart3 2s linear 1;
-  animation: apart3 2s linear 1;
+  -webkit-animation: apart3 4s linear 1;
+  -o-animation: apart3 4s linear 1;
+  animation: apart3 4s linear 1;
 }
 
 
@@ -254,7 +271,7 @@
 }
 
 .textAnimation {
-  -webkit-animation: textAnim 2s linear 1;
-  -o-animation: textAnim 2s linear 1;
-  animation: textAnim 2s linear 1;
+  -webkit-animation: textAnim 4s linear 1;
+  -o-animation: textAnim 4s linear 1;
+  animation: textAnim 4s linear 1;
 }
