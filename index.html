@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	<title>My place or yours?</title>
 	<style>
 		
@@ -16,16 +17,16 @@
 	<header>
 		<div class="navbar-fixed-top">
 			<div id="homeButton" class="blackBackground">
-				<a href="#home">
+				<a href="#firstPage">
 					<img src="images/homePage/keys-sign.png" alt="keys-sign">
 				</a>
 			</div>
 			<div class="navMenuContainer hidden">	
 				<nav id="navigation">
 			            <ul class="centerBlock">
-			                <li><a href="#aboutSection" class="nav-link">ABOUT</a></li>
-			                <li><a href="#ourApartments" class="nav-link">OUR APPARTMENTS</a></li>
-			                <li><a href="#howToFindUs" class="nav-link">HOW TO FIND US?</a></li>
+			                <li data-menuanchor="secondPage"><a href="#secondPage" class="nav-link">ABOUT</a></li>
+			                <li data-menuanchor="3rdPage"><a href="#3rdPage" class="nav-link">OUR APPARTMENTS</a></li>
+			                <li data-menuanchor="4thpage"><a href="#4thpage" class="nav-link">HOW TO FIND US?</a></li>
 			            </ul>
 		    	</nav>	
 	    	</div>
@@ -58,11 +59,13 @@
 	<!-- END OF THE HEADER -->
 
 
-	<!-- HOME SECTION VIDEO BACKGROUND -->
+<div id="fullpage">	<!-- HOME SECTION VIDEO BACKGROUND -->
+
+<div class="section">
 	<section style="overflow: hidden;" class="">
-	<div id="home"></div>
-		<video autoplay="autoplay" loop class="">
-        	<source src="video/homeVideo.mp4" type="video/mp4" />
+	<div id="home" class=""></div>
+		<video data-autoplay data-keepplaying loop>
+        	<source src="video/myplace_last.mp4" type="video/mp4" />
 		</video>
 		<div class="container-fluid homeContainer">
 			<div class="row">
@@ -109,12 +112,13 @@
 
 		</div>
 	</section>
+</div>
 	<!-- END OF HOME SECTION VIDEO BACKGROUND -->
-
+<div class="section">
 	<!-- ABOUT SECTION -->
-	<section id="aboutSection" class="">
+	<section id="aboutSection">
 
-		<div class="map">
+		<div class="map hide">
 			<img class="" src="images/homePage/map.png" alt="map">
 		</div>
 		<div class="femaleTourist">
@@ -171,7 +175,7 @@
 				</div>
 			</div>
 
-		</div>
+
 
 
 	
@@ -186,273 +190,285 @@
 		<!-- BOTTOM TRIANGLES END -->
 		
 	</section>
+			</div>
+
 	<!-- ABOUT SECTION END -->
 
 	<!-- OUR APARTMENTS SECTION -->
-	<section name="ourApartments" style="background-color:  #dcd9db; position: relative;">
-		<a name="ourApartments"></a>
-		<div id="ourApartments" class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 leftColumn">
-					<div class="apartmentThree">
-						
-						<div class="blackOpacity relativePosition">
-							<div class="stepIn ap3stepIn">
-								<p>Step in >></p>
-							</div>	
-							<div class="specialBorderRectangleAp3">
-								<div class="relativePosition full">
-									<div class="rectangleSmall"></div>
+	<div class="section">
+		<section name="ourApartments" style="background-color:  #dcd9db; position: relative;">
+			<a name="ourApartments"></a>
+			<div id="ourApartments" class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 leftColumn">
+						<div class="apartmentThree">
+							
+							<div class="blackOpacity relativePosition">
+								<div class="stepIn ap3stepIn">
+									<p>Step in >></p>
+								</div>	
+								<div class="specialBorderRectangleAp3">
+									<div class="relativePosition full">
+										<div class="rectangleSmall"></div>
+									</div>
+								</div>
+								<div class="apartmentText textAnimation">
+									<span>Studio Apartments</span>
+									<p>17 Puskin  Str.</p>
 								</div>
 							</div>
-							<div class="apartmentText textAnimation">
-								<span>Studio Apartments</span>
-								<p>17 Puskin  Str.</p>
+						</div>
+						<div class="apartmentTwo">
+							<div class="blackOpacity relativePosition">
+								<div class="stepIn ap2stepIn">
+									<p>Step in >></p>
+								</div>
+								<div class="specialBorderRectangleAp2">
+									<div class="relativePosition full">
+										
+									</div>
+								</div>	
+								<div class="apartmentText textAnimation">
+									<span>Studio Apartments</span>
+									<p>17 Puskin  Str.</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="apartmentTwo">
-						<div class="blackOpacity relativePosition">
-							<div class="stepIn ap2stepIn">
-								<p>Step in >></p>
-							</div>
-							<div class="specialBorderRectangleAp2">
-								<div class="relativePosition full">
-									
+					<div class="col-lg-6 col-md-6 col-sm-6 rightColumn">
+						<div class="apartmentOne">
+							<div class="blackOpacity relativePosition">
+								<div class="stepIn ap1stepIn">
+									<p>Step in >></p>
 								</div>
-							</div>	
-							<div class="apartmentText textAnimation">
-								<span>Studio Apartments</span>
-								<p>17 Puskin  Str.</p>
+								<div class="apartmentText textAnimation">
+									<span>Family Apartment</span>
+									<p>15 Puskin  Str.</p>
+								</div>
+							</div>
+						</div>
+						<div class="vases">
+							<div class="specialBorderRectangleOurAp">
+								<div class="relativePosition full">
+									<div class="rectangleSmallUpLeft"></div>
+									<div class="rectangleSmallUpBorder"></div>
+									<div class="rectangleSmallUpRight"></div>
+									<div class="rectangleSmallDownRight"></div>
+									<div class="rectangleSmallDownRightTwo"></div>
+								</div>
+							</div>
+							<div class="apartmentText blackTextColor">
+								<span>Our Apartments</span>
+								<p>Confort & visual satisfaction</p>
+							</div>
+							<div class="col-sm-6">
+								<div class="vase vaseAnimation1"></div>
+								<div class="button">
+									Book NOW!
+								</div>
+							</div>
+							
+							<div class="col-sm-6">
+								<div class="vasesAndDoors vaseAnimation2"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 rightColumn">
-					<div class="apartmentOne">
-						<div class="blackOpacity relativePosition">
-							<div class="stepIn ap1stepIn">
-								<p>Step in >></p>
+				<!-- BOTTOM TRIANGLES -->
+				<!-- triangle color ======= #dcd9db -->
+				
+				<div class="triangle">
+						<div class="triangleDownOurAp triangleMarginLeft"></div>
+						<div class="triangleDownOurAp triangleMarginRight"></div>
+				</div>
+
+				<!-- BOTTOM TRIANGLES END -->
+			</div>
+			
+		</section>
+	<!-- END OUR APARTMENTS -->
+	</div>
+	<div class="section">
+		<section name="howToFindUs" id="howToFindUs" style="background-color: #666666;">
+			<div class="relativePosition">
+				<div class="map">
+					<img src="images/homePage/map.png" alt="map">
+				</div>
+				<div class="femaleTourist">
+					<img src="images/homePage/htofindus_ftourist image.png" alt="femaleTourist">
+				</div>
+				<div class="container-fluid">
+					<div class="row headerText">
+						<div class="col-lg-2 col-md-2 col-sm-2">
+							
+						</div>
+						<div class="HtfuTextContainer col-lg-8 col-md-8 col-sm-8">
+							<p class="htfu">How to find us?</p>
+							<p class="mapsAndDirections">Maps & Directions</p>
+							<div id="integratedMap">
+
 							</div>
-							<div class="apartmentText textAnimation">
-								<span>Family Apartment</span>
-								<p>15 Puskin  Str.</p>
+							<br>
+
+							<p><span>An Airport Shuttle Service</span></p>
+							<br>
+							<div class="abc">
+								<p>We operate an airport shuttle service, for as little as 19 Euros.You will be collected by an English-speaking chauffeur and driven </p>
+								<p>safely to your destination in comfort and privacy. </p>
+								<br>
+								<p>To use the airport shuttle service, you will need a mobile phone that works in Hungary. When you will have passed the passport </p>
+								<p>control and collected your luggage, as you leave the terminal you will have to call the driver and he will pick you up in the lower </p>
+								<p>parking lot outside the terminal. Just call him, walk downstairs he will be there then.</p>
+
+								<p>To reserve a transfer from the airport to your hotel, please complete the booking form below, or contact us directly.</p>
 							</div>
 						</div>
-					</div>
-					<div class="vases">
-						<div class="specialBorderRectangleOurAp">
-							<div class="relativePosition full">
-								<div class="rectangleSmallUpLeft"></div>
-								<div class="rectangleSmallUpBorder"></div>
-								<div class="rectangleSmallUpRight"></div>
-								<div class="rectangleSmallDownRight"></div>
-								<div class="rectangleSmallDownRightTwo"></div>
-							</div>
-						</div>
-						<div class="apartmentText blackTextColor">
-							<span>Our Apartments</span>
-							<p>Confort & visual satisfaction</p>
-						</div>
-						<div class="col-sm-6">
-							<div class="vase vaseAnimation1"></div>
-							<div class="button">
-								Book NOW!
-							</div>
-						</div>
-						
-						<div class="col-sm-6">
-							<div class="vasesAndDoors vaseAnimation2"></div>
+						<div class="col-lg-2 col-md-2 col-sm-2">
 						</div>
 					</div>
 				</div>
+				
 			</div>
 			<!-- BOTTOM TRIANGLES -->
 			<!-- triangle color ======= #dcd9db -->
 			
 			<div class="triangle">
-					<div class="triangleDownOurAp triangleMarginLeft"></div>
-					<div class="triangleDownOurAp triangleMarginRight"></div>
+					<div class="triangleDownHTFU triangleMarginLeft"></div>
+					<div class="triangleDownHTFU triangleMarginRight"></div>
 			</div>
 
 			<!-- BOTTOM TRIANGLES END -->
-		</div>
-		
-	</section>
-	<!-- END OUR APARTMENTS -->
-	
-	<section name="howToFindUs" id="howToFindUs" style="background-color: #666666;">
-		<div class="relativePosition">
-			<div class="map">
-				<img src="images/homePage/map.png" alt="map">
-			</div>
-			<div class="femaleTourist">
-				<img src="images/homePage/htofindus_ftourist image.png" alt="femaleTourist">
-			</div>
-			<div class="container-fluid">
-				<div class="row headerText">
-					<div class="col-lg-2 col-md-2 col-sm-2">
-						
-					</div>
-					<div class="HtfuTextContainer col-lg-8 col-md-8 col-sm-8">
-						<p class="htfu">How to find us?</p>
-						<p class="mapsAndDirections">Maps & Directions</p>
-						<div id="integratedMap">
-
-						</div>
-						<br>
-
-						<p><span>An Airport Shuttle Service</span></p>
-						<br>
-						<div class="abc">
-							<p>We operate an airport shuttle service, for as little as 19 Euros.You will be collected by an English-speaking chauffeur and driven </p>
-							<p>safely to your destination in comfort and privacy. </p>
-							<br>
-							<p>To use the airport shuttle service, you will need a mobile phone that works in Hungary. When you will have passed the passport </p>
-							<p>control and collected your luggage, as you leave the terminal you will have to call the driver and he will pick you up in the lower </p>
-							<p>parking lot outside the terminal. Just call him, walk downstairs he will be there then.</p>
-
-							<p>To reserve a transfer from the airport to your hotel, please complete the booking form below, or contact us directly.</p>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2">
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<!-- BOTTOM TRIANGLES -->
-		<!-- triangle color ======= #dcd9db -->
-		
-		<div class="triangle">
-				<div class="triangleDownHTFU triangleMarginLeft"></div>
-				<div class="triangleDownHTFU triangleMarginRight"></div>
-		</div>
-
-		<!-- BOTTOM TRIANGLES END -->
-	</section>
-	<section id="contactUs" style="background-color: #555555;">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-2 col-md-2 col-sm-2">
-						
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-8">
-						<div class="container-fluid">
-							<div class="row marginBottom4vh">
-								<div class="col-lg-4 col-md-2 col-sm-2 bookATransfer">Book a Transfer</div>
-								<div class="col-lg-8 col-md-8 col-sm-8">
-									<div class="line">
-										<div class="expandable">
-											<div>+</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Form Control Book a transfer  -->
-							<div class="row bookATransferForm">	
-								<form action="">
-									<div class="formCol">
-										<div class="form-group">
-											<label for="arrDate">ARRIVAL DATE*</label>
-											<input type="date" id="arrDate">
-										</div>
-										<!-- <br> -->
-										<div class="form-group">
-											<label for="fName">FIRST NAME*</label>
-											<input type="text" id="fName">
-										</div>
-									</div>
-									<div class="formCol">
-										<div class="form-group">
-											<label for="landTime">LANDING TIME*</label>
-											<input type="time" id="landTime">
-										</div>
-										<!-- <br> -->
-										<div class="form-group">
-											<label for="lName">LAST NAME*</label>
-											<input type="text" id="lName">
-										</div>
-									</div>
-									<div class="formCol">
-										<div class="form-group">
-											<label for="fNumber">FLIGHT NUMBER*</label>
-											<input type="text" id="fNumber">
-										</div>
-										<!-- <br> -->
-										<div class="form-group">
-											<label for="lName">EMAIL*</label>
-											<input type="email" id="lName">
-										</div>
-									</div>
-									<div class="formCol">
-										<div class="form-group">
-											<label for="passengers">PASSENGERS*</label>
-											<input type="number" id="passengers">
-										</div>
-										<!-- <br> -->
-										<div class="form-group">
-											<label for="lName">PHONE NUMBER*</label>
-											<input type="email" id="lName">
-										</div>
-									</div>
-									<div class="clear">
-										<button type="submit">SEND INQUIRY</button>
-									</div>
-								</form>
-							</div>
-							<!-- END Form Control book a transfer -->
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2">
-						
-					</div>
-				</div>
-				<!-- BOTTOM TRIANGLES -->
-				<!-- triangle color ======= #dcd9db -->
-				<div class="relativePosition lastTriangleContainer">
-					<div class="triangle">
-						<div class="triangleDownBookT triangleMarginLeft"></div>
-						<div class="triangleDownBookT triangleMarginRight"></div>
-					</div>
-				</div>
-
-				<!-- BOTTOM TRIANGLES END -->
-			</div>
-				<div class="contactUs container-fluid">
+		</section>
+	</div>
+	<div class="section">
+		<section id="contactUs" style="background-color: #555555;">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-2 col-md-2 col-sm-2">
 							
 						</div>
 						<div class="col-lg-8 col-md-8 col-sm-8">
-							<div class="bookATransfer">
-								Contact Us
-							</div>
-							<div class="contactUsForm">
-								<form action="">
-									<div class="nameAndPhone">
-										<input type="text" placeholder="NAME*">
-										<input type="phone" placeholder="PHONE*">
+							<div class="container-fluid">
+								<div class="row marginBottom4vh">
+									<div class="col-lg-4 col-md-2 col-sm-2 bookATransfer">Book a Transfer</div>
+									<div class="col-lg-8 col-md-8 col-sm-8">
+										<div class="line">
+											<div class="expandable">
+												<div>+</div>
+											</div>
+										</div>
 									</div>
-									<div class="email">
-										<input type="email" placeholder="EMAIL*">
-									</div>
-									<div class="message">
-										<textarea name="yourMessage" placeholder="YOUR MESSAGE*" cols="30" rows="5"></textarea>
-									</div>
-									<div class="send">
-										<button type="submit">SEND</button>
-									</div>
-								</form>
+								</div>
+								<!-- Form Control Book a transfer  -->
+								<div class="row bookATransferForm">	
+									<form action="">
+										<div class="formCol">
+											<div class="form-group">
+												<label for="arrDate">ARRIVAL DATE*</label>
+												<input type="date" id="arrDate">
+											</div>
+											<!-- <br> -->
+											<div class="form-group">
+												<label for="fName">FIRST NAME*</label>
+												<input type="text" id="fName">
+											</div>
+										</div>
+										<div class="formCol">
+											<div class="form-group">
+												<label for="landTime">LANDING TIME*</label>
+												<input type="time" id="landTime">
+											</div>
+											<!-- <br> -->
+											<div class="form-group">
+												<label for="lName">LAST NAME*</label>
+												<input type="text" id="lName">
+											</div>
+										</div>
+										<div class="formCol">
+											<div class="form-group">
+												<label for="fNumber">FLIGHT NUMBER*</label>
+												<input type="text" id="fNumber">
+											</div>
+											<!-- <br> -->
+											<div class="form-group">
+												<label for="lName">EMAIL*</label>
+												<input type="email" id="lName">
+											</div>
+										</div>
+										<div class="formCol">
+											<div class="form-group">
+												<label for="passengers">PASSENGERS*</label>
+												<input type="number" id="passengers">
+											</div>
+											<!-- <br> -->
+											<div class="form-group">
+												<label for="lName">PHONE NUMBER*</label>
+												<input type="email" id="lName">
+											</div>
+										</div>
+										<div class="clear">
+											<button type="submit">SEND INQUIRY</button>
+										</div>
+									</form>
+								</div>
+								<!-- END Form Control book a transfer -->
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-2">
 							
 						</div>
 					</div>
+					<!-- BOTTOM TRIANGLES -->
+					<!-- triangle color ======= #dcd9db -->
+					<div class="relativePosition lastTriangleContainer">
+						<div class="triangle">
+							<div class="triangleDownBookT triangleMarginLeft"></div>
+							<div class="triangleDownBookT triangleMarginRight"></div>
+						</div>
+					</div>
+
+					<!-- BOTTOM TRIANGLES END -->
 				</div>
-	</section>
+					<div class="contactUs container-fluid">
+						<div class="row">
+							<div class="col-lg-2 col-md-2 col-sm-2">
+								
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8">
+								<div class="bookATransfer">
+									Contact Us
+								</div>
+								<div class="contactUsForm">
+									<form action="">
+										<div class="nameAndPhone">
+											<input type="text" placeholder="NAME*">
+											<input type="phone" placeholder="PHONE*">
+										</div>
+										<div class="email">
+											<input type="email" placeholder="EMAIL*">
+										</div>
+										<div class="message">
+											<textarea name="yourMessage" placeholder="YOUR MESSAGE*" cols="30" rows="5"></textarea>
+										</div>
+										<div class="send">
+											<button type="submit">SEND</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2">
+								
+							</div>
+						</div>
+					</div>
+		</section>
+	</div>
+</div>
 	<script src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script async defer
 				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1rj0ij6CQRGeEuGGyEh0kO9zuKUktHbI&callback=initMap">

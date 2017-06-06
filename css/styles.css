@@ -182,7 +182,7 @@ header {
 
 #ourApartments {
 	background-color: #dcd9db;
-	
+	margin-left: 7px;
 }
 
 .navMenuContainer {
@@ -528,20 +528,20 @@ a.nav-link:active
 .apartmentThree {
 	width: 50vw;
 	height: 45.46vh;
-	background-image: url('../images/homePage/ap3.jpg');
+	background-image: url('../images/homePage/ap3negative.jpg');
 }
 
 .apartmentTwo {
 	width: 51.19vw;
 	height: 55.54vh;
-	background-image: url('../images/homePage/ap2.jpg');
+	background-image: url('../images/homePage/ap2negative.jpg');
 }
 
 .apartmentOne {
 	margin-left: 20px;
 	width: 50vw;
 	height: 61.11vh;
-	background-image: url('../images/homePage/ap1.jpg');
+	background-image: url('../images/homePage/ap1negative.jpg');
 }
 
 .vases {
@@ -838,6 +838,7 @@ a.nav-link:active
 #integratedMap {
   width: 100%;
   height: 43vh;
+  pointer-events: none;
 }
 
 .htfu {
@@ -965,7 +966,7 @@ a.nav-link:active
   width: 100vw;
   background-image: url(../images/homePage/contactUsBg.jpg);
   background-size: 100% 100%;
-  padding-top: 10vh;
+  /* padding-top: 10vh; */
 }
 
 .contactUs input, .message textarea, .send button {
@@ -1020,5 +1021,9 @@ a.nav-link:active
 
 .aboutArrows {
   bottom: 18vh;
+}
+
+.section {
+  margin-bottom: 11vh;
 }
 

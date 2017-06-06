@@ -5,13 +5,13 @@
 	<title>Apartment One</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/stylesAppartments.css">
+	<link rel="stylesheet" href="css/stylesApartmentsAP1.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
 </head>
 <body ng-controller="AppartmentController" scroll>
 	<div class="navbar-fixed-top">
 		<div id="close" ng-click="toggleTopMenu()">X</div>		
 		<div class="container-fluid fixsPic1edNavigation">
-		<!-- ng-class="{'open' : toggle}" -->
 			<div class="row">
 				<div class="smallPicsContainer" ng-repeat="number in numbersArray" >
 					<div class="sPic{{number}}"></div>
@@ -125,7 +125,31 @@
 			<div id="picAndSliderContainer" class="row positionRelative">
 				<div class="freeBreakfastImageAndButton positionRelative">
 					<div class="fbSlider positionAbsolute">
-						<div class="sliderImages"></div>
+
+						 <div class="swiper-container">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide ap1sl1 backSize100"></div>
+					            <div class="swiper-slide ap1sl2 backSize100"></div>
+					            <div class="swiper-slide ap1sl3 backSize100"></div>
+					            <div class="swiper-slide ap1sl4 backSize100"></div>
+					            <div class="swiper-slide ap1sl5 backSize100"></div>
+					            <div class="swiper-slide ap1sl6 backSize100"></div>
+					            <div class="swiper-slide ap1sl7 backSize100"></div>
+					            <div class="swiper-slide ap1sl8 backSize100"></div>
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination"></div>
+					        <!-- Add Arrows -->
+					        <div class="swiper-button-next"></div>
+					        <div class="swiper-button-prev"></div>
+					    </div>
+						<!-- <div class="sliderImages swiper-container">
+							<div class="swiper-wrapper">
+								<div ng-repeat="n in numbersArray" class="fbSlider positionAbsolute swiper-slide sl{{n}}">{{n}}</div>
+							</div>
+							<div class="swiper-button-next"></div>
+						        					<div class="swiper-button-prev"></div>
+						</div> -->
 					</div>
 					<div class="fbButton positionAbsolute">
 						Free breakfast and parking if you book directly on this website!
@@ -136,10 +160,9 @@
 		</section>
 	</div>
 	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<!-- https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js -->
 	<script src="js/angular.js"></script>
 	<script src="js/angular-animate.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/app1.js"></script>
 </body>
 </html>

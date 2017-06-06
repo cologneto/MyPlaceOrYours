@@ -1,0 +1,546 @@
+body {
+	background-color: #dcd9db;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+}
+/* 
+
+@import url(../fonts/286113f7f49cc7f348402a12c2419ed9);
+@font-face {
+    font-family: "Tw Cen MT";
+    src: url("../fonts/286113f7f49cc7f348402a12c2419ed9.eot");
+    src: url("../fonts/286113f7f49cc7f348402a12c2419ed9.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.woff2") format("woff2"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.woff") format("woff"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.ttf") format("truetype"),
+    url("../fonts/286113f7f49cc7f348402a12c2419ed9.svg#Tw Cen MT") format("svg");
+}
+ */
+
+@font-face {
+	font-family: 'Tw Cen MT';
+	src: url('../fonts/fontscorecomttwcenmt.eot');
+	src: local('../fonts/fontscorecomttwcenmt'), url('../fonts/fontscorecomttwcenmt.woff') format('woff'), url('../fonts/fontscorecomttwcenmt.ttf') format('truetype');
+}
+
+.fixsPic1edNavigation {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.testContainer {
+	display: table-cell;
+	width: 100%;
+}
+
+#close {
+	font-family: "Tw Cen MT";
+	width: 5.5vh;
+	height: 5.5vh;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	font-size: 4vh;
+	color: white;
+	text-align: center;
+	z-index: 9999;
+}
+
+#leftSide {
+	width: 37.5%;
+}
+
+#rightSide {
+	width: 37.5%;
+}
+
+#center {
+	width: 25%;
+	height: 100vh;
+	border-right: 0.1vh solid #707070;
+}
+
+#textContainer {
+	background-color: #636363;
+	font-family: "Tw Cen MT";
+	padding: 0 4vh;
+	display: none;
+}
+
+#textContainer div, #textContainer p {
+	color: #dcd9db;
+	line-height: 1;
+}
+
+#textContainer p {
+	margin:0;
+	padding: 0;
+	font-size: 2.3vh;
+}
+
+#textContainer p:last-child {
+	padding-bottom: 3vh;
+}
+ 
+#textContainer .header {
+	font-size: 5.55vh;
+	padding-top: 2vh;
+}
+
+
+#textContainer .street {
+	font-size: 3vh;
+	text-align: right;
+	margin: 0 0 2vh 0;
+
+}
+
+.floatLeft {
+	float: left;
+}
+
+.positionAbsolute {
+	position: absolute;
+}
+
+.noPaddingLeftRight {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.picContainer {
+	width: 33.333333333%;
+	float: left;
+	border-right: 0.1vh solid #707070;
+	height: 100vh;
+}
+
+.pic1, .pic2, .pic3, .pic4, .pic6, .pic5 {
+	width: 100%;
+	background-size: 100% 100%;
+	display: none;
+}
+
+
+.pic1 {
+	height: 55vh;
+	background-image: url("../images/ApartmentThree/1st-upper-photo.jpg");
+}
+
+.pic2 {
+	height: 52vh;
+	background-image: url("../images/ApartmentThree/2nd-upper-photo.jpg");
+}
+
+.pic3 {
+	height: 56vh;
+	background-image: url("../images/ApartmentThree/3rd-upper-photo.jpg");
+}
+
+.pic4 {
+	height: 20vh;
+	background-image: url("../images/ApartmentThree/4th-upper-photo.jpg");
+}
+
+.pic5 {
+	height: 25vh;
+	background-image: url("../images/ApartmentThree/5th-upper-photo.jpg");
+}
+
+.pic6 {
+	height: 49vh;
+	background-image: url("../images/ApartmentThree/6th-upper-photo.jpg");
+}
+
+
+.smallPicsContainer {
+	/*position: relative;*/
+	width: 12.5%;
+	float: left;
+}
+
+.sPic1,
+.sPic2,
+.sPic3,
+.sPic4,
+.sPic5,
+.sPic6,
+.sPic7,
+.sPic8 {
+	height: 2.77vh;
+	opacity: 0.6;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.sPic1 {
+	background-image: url("../images/ApartmentThree/1st-upper-photo.jpg");
+}
+
+.sPic2 {
+	background-image: url("../images/ApartmentThree/2nd-upper-photo.jpg");
+}
+
+.sPic3 {
+	background-image: url("../images/ApartmentThree/3rd-upper-photo.jpg");
+}
+
+.sPic4 {
+	background-color: #636363;
+}
+
+.sPic5 {
+	background-color: #636363;
+}
+
+.sPic6 {
+	background-image: url("../images/ApartmentThree/4th-upper-photo.jpg");
+}
+
+.sPic7 {
+	background-image: url("../images/ApartmentThree/5th-upper-photo.jpg");
+}
+
+.sPic8 {
+	background-image: url("../images/ApartmentThree/6th-upper-photo.jpg");
+}
+
+.rectangle1, .rectangle2, .rectangle3, .rectangle4,
+.rectangle5, ..rectangle6, .rectangle7, .rectangle8, {
+	width: 100%;
+}
+
+.rectangle1 {
+	height: 4.16vh;
+	background-color: #b7b7b7;
+}
+
+.rectangle2 {
+	height: 3.7vh;
+	background-color: #a1a1a1;
+} 
+
+.rectangle3 {
+	height: 2.3vh;
+	background-color: #b7b7b7;
+} 
+
+.rectangle4 {
+	height: 1.4vh;
+	background-color: #a1a1a1;
+} 
+
+.rectangle5 {
+	height: 2.3vh;
+	background-color: #b7b7b7;
+} 
+
+.rectangle6 {
+	height: 1.4vh;
+	background-color: #a1a1a1;
+} 
+
+.rectangle7 {
+	height: 2.77vh;
+	background-color: #b7b7b7;
+} 
+
+.rectangle8 {
+	height: 2.3vh;
+	background-color: #a1a1a1;
+}
+
+.downArrowsContainer {
+	position: absolute;
+	bottom: 3vh;
+	left: 0;
+	width: 100%;
+}
+
+.arrow {
+	padding-top: 0;
+	margin: auto;
+	height: 5vh;
+	width: 5vh;
+}
+
+.arr {
+	height: 33%;
+	width: 100%;
+	background-image: url("../images/homePage/slideDown.png");
+	background-size: 100% 100%;
+	margin-bottom: -0.5vh;
+	cursor: pointer; 
+}
+
+/*===================================*/
+/*====== BIG IMAGE CONTAINER ========*/
+/*===================================*/
+
+
+
+.padding8 {
+	padding: 0 8vw;
+}
+
+.bigImage {
+	width: 100%;
+	height: 90vh;
+	background-size: 100% 100%;
+	background-image: url("../images/ApartmentThree/photo1.jpg");
+}
+
+.thinVerticalLineCupboard, .thinVerticalLineBarChair {
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	width: 0.08vw;
+}
+
+.positionRelative {
+	position: relative;
+}
+
+#bigImageContainer .thinVerticalLineCupboard {
+	left: 14.5vw;
+	height: 11.5vh;
+}
+
+#bigImageContainer .thinVerticalLineBarChair {
+	left: 36vw;
+	height: 6vh;
+}
+
+.chairAnimationStart {
+	position: absolute;
+	top:25vh;
+	left:0;
+}
+
+/*==========================================*/
+/*====== END OF BIG IMAGE CONTAINER ========*/
+/*==========================================*/
+
+
+
+
+/*===========================*/
+/*MOVING FURNITURE CONTAINER*/
+/*===========================*/
+
+#movingFurnitureContainer .thinVerticalLineCupboard {
+	top:0;
+	left: 14.5vw;
+	height: 30.5vh;
+	background-color: #7d7c7d !important;
+}
+
+#movingFurnitureContainer .cupboard {
+	left: 10vw;
+	top: 29vh;
+	width:  8vw;
+	height: 35vh;
+	background-image: url("../images/AppartmentOne/cupboard.png");
+	background-size: 100% 100%;
+}
+
+#movingFurnitureContainer .thinVerticalLineBarChair {
+	top:0;
+	left: 36vw;
+	height: 43.5vh;
+	background-color: #7d7c7d !important;
+}
+
+#movingFurnitureContainer .barChair1 {
+	left: 35vw;
+	top: 35vh;
+	width:  8vw;
+	height: 35vh;
+	background-image: url("../images/AppartmentOne/bar-chair-1.png");
+	background-size: 100% 100%;
+}
+
+#movingFurnitureContainer .barChair2 {
+	left: 26vw;
+	top: 50vh;
+	width:  8vw;
+	height: 35vh;
+	background-image: url("../images/AppartmentOne/bar-chair-2.png");
+	background-size: 100% 100%;
+}
+
+
+
+#movingFurnitureContainer .image {
+	top: 5vh;
+	right: 10vw;
+	width: 42vw;
+	height: 49vh;
+	background-image: url("../images/AppartmentOne/photo-2.jpg"); 
+	background-size: 100% 100%;
+}
+
+#movingFurnitureContainer .image .thinLinesContainer {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.thinVerticalLineChair {
+	left: 20%;
+	bottom: 0;
+	width: 0.08vw;
+	height: 15%;
+	background-color: #dcd9db;
+}
+
+.thinVerticalLineChair2 {
+	left: 20%;
+	bottom: -10%;
+	width: 0.08vw;
+	height: 10%;
+	background-color: #707070;
+}
+
+.horisontalLineChair {
+	left: 20%;
+	bottom: -10%;
+	width: 65%;
+	height: 0.08vw;
+	background-color: #707070;
+}
+
+.thinVerticalLineChair3 {
+	left: 84.8%;
+	bottom: -55%;
+	width:  0.08vw;
+	height: 45%;
+	background-color: #707070;
+}
+
+.chair {
+	left: 75%;
+	bottom: -80%;
+	width:  14.8vw;
+	height: 30vh;
+	background-image: url("../images/AppartmentOne/chair.png");
+	background-size: 100% 100%;
+}
+
+.smallDetailsText {
+	left: 0%;
+	bottom: -40%;
+	font-family: "Tw Cen MT";
+	font-size: 4.7vh;
+	color: #636363;
+}
+
+
+
+/*=================================*/
+/*END OF MOVING FURNITURE CONTAINER*/
+/*=================================*/
+
+/*=============================================================*/
+/*============= PICTURE AND SLIDER CONTAINER ==================*/
+/*=============================================================*/
+
+
+#picAndSliderContainer {
+	padding: 16vh 8vw;
+	width: 100%;
+	height: inherit;
+	margin: 0 !important;
+}
+
+.freeBreakfastImageAndButton {
+	width: 100%;
+	height: 100%;
+}
+
+.fbSlider {
+	background-image:  url('../images/AppartmentOne/top-picture-of-slideshow.jpg');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.backSize100 {
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.swiper-container {
+	height: 52vh;
+	width: 40vw;
+}
+
+.ap1sl1 {
+	background-image: url('../images/AppartmentOne/top-picture-of-slideshow.jpg');
+}
+
+.ap1sl2 {
+	background-image: url('../images/AppartmentOne/big2.jpg');
+}
+.ap1sl3 {
+	background-image: url('../images/AppartmentOne/big3.jpg');
+}
+.ap1sl4 {
+	background-image: url('../images/AppartmentOne/big4.jpg');
+}
+.ap1sl5 {
+	background-image: url('../images/AppartmentOne/big5.jpg');
+}
+.ap1sl6 {
+	background-image: url('../images/AppartmentOne/big6.jpg');
+}
+
+.ap1sl7 {
+	background-image: url('../images/AppartmentOne/big7.jpg');
+}
+
+.ap1sl8 {
+	background-image: url('../images/AppartmentOne/big8.jpg');
+}
+
+.ap1sl9 {
+	background-image: url('../images/AppartmentOne/big8.jpg');
+}
+
+.imageRight	{
+	height: 51vh;
+	width: 37.4vw;
+	background-image:  url('../images/AppartmentOne/photo-3.jpg');
+	background-size: 100% 100%;
+	bottom: 6vh;
+	right: 0;
+}
+
+.fbButton {
+	bottom: 6vh;
+	left: 0;
+	width: 40vw;
+	height: 5.9vh;
+	background-color: #790000;
+	text-align: center;
+	color: white;
+	font-family: "Tw Cen MT";
+	font-size: 2.9vh;
+	cursor: pointer;
+	padding-top: 0.74vh;
+}
+
+
+
+/*=============================================================*/
+/*============= PICTURE AND SLIDER CONTAINER ==================*/
+/*=============================================================*/
+.smallPicsContainer.open {
+    top: 0;
+    left: 0;
+}

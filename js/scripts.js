@@ -206,15 +206,19 @@ function ShowHideMenuNavigation(x) {
 }
 
 $(document).ready(function() {
-  $(".nav-link").on("click", function( e ) {
-
-    e.preventDefault();
-
-    $("body, html").animate({ 
-      scrollTop: $( $(this).attr('href') ).offset().top 
-    }, 600);
-
-  });
+  var bookATransferForm = $('.bookATransferForm');
+  bookATransferForm.addClass("hide");
+  $('.expandable').on('click', function(event) {
+    event.preventDefault();
+    if (bookATransferForm.hasClass('hide')) {
+      bookATransferForm.removeClass('hide');
+      $(this).children('div').text('-');
+    } else {
+      bookATransferForm.addClass("hide");
+      $(this).children('div').text('+');
+    }
+  });;
+  
 
   $("#homeButton").on("click", function() {
     // body...
@@ -222,7 +226,31 @@ $(document).ready(function() {
       scrollTop: 0 
     }, 1500);
   })
+  $('#fullpage').fullpage({
+    verticalCentered: false,
+    anchors: ['firstPage', 'secondPage','3rdPage','4thpage'],
+    menu: '#menu',
+    afterLoad: function(anchorLink, index){
+      var loadedSection = $(this);
+
+      //using index
+      if(index == 2){
+         $(".photoGirl").children().addClass("photoAnimation");
+         $(".map").removeClass('hide').children().addClass("rotating");
+      }
+
+      //using anchorLink
+      if(anchorLink == '3rdPage'){
+        $(".apartmentOne").addClass("apartAnimation1").css('background-image', 'url(images/homePage/ap1.jpg)');
+        $(".apartmentTwo").addClass("apartAnimation2").css('background-image', 'url(images/homePage/ap2.jpg)');
+        $(".apartmentThree").addClass("apartAnimation3").css('background-image', 'url(images/homePage/ap3.jpg)');
+      }
+    }
+
   });
+});
+
+/*'3rdPage', '4thpage', '5thpage','6thpage','7thpage','8thpage','9thpage'*/
 
 var isDownScroll = function(offsetTop) {
   if (offsetTop > lastScrollTop){
@@ -272,78 +300,9 @@ $(".stepIn").on("click", function() {
 })
 
 
-  // $(document).on("scroll", function(e) {
-  //   e.preventDefault();
-  //   
-    
-  //   scrollEventCounter++;
-
-  //   // console.log(isDownScroll(offsetTop));
-  //   // console.log(sectionNumber(offsetTop));
-  //   var sectionNumberNow = sectionNumber(offsetTop);
-  //   if ((isDownScroll(offsetTop)) &&  sectionNumberNow == 1 && scrollEventCounter>=5) {
-
-  //       $("body, html").animate({ 
-  //         scrollTop: sectionP[1].offsetTop 
-  //       }, 600);
-  //   }
-  //   else if ((isDownScroll(offsetTop)) &&  sectionNumberNow == 2 && scrollEventCounter>=5) {
-  //       $("body, html").animate({ 
-  //         scrollTop: sectionP[2].offsetTop 
-  //       }, 600);
-  //   }
-  //   else if ((isDownScroll(offsetTop)) &&  sectionNumberNow == 3 && scrollEventCounter>=5) {
-  //       $("body, html").animate({ 
-  //         scrollTop: sectionP[3].offsetTop 
-  //       }, 600);
-  //   }
-  //   else if ((!isDownScroll(offsetTop)) &&  sectionNumberNow == 4 && scrollEventCounter>=5) {
-  //       $("body, html").animate({ 
-  //         scrollTop: sectionP[2].offsetTop 
-  //       }, 600);
-  //   }
-  //   else if ((!isDownScroll(offsetTop)) &&  sectionNumberNow == 3 && scrollEventCounter>=5) {
-  //       $("body, html").animate({ 
-  //         scrollTop: sectionP[1].offsetTop 
-  //       }, 600);
-  //   }
-  //   else if ((!isDownScroll(offsetTop)) &&  sectionNumberNow == 2 && scrollEventCounter>=5) {
-  //       $("body, html").animate({ 
-  //         scrollTop: sectionP[0].offsetTop 
-  //       }, 600);
-  //   }
-  //   // $(window).scrollTop(windowHeight*2);
-  //   lastScrollTop = offsetTop;
-  //   console.log(scrollEventCounter);
-  //   scrollEventCounter == 0;
-
-  // });
-
-
-
-
-
-// var page = $("html, body");
-
-// $( "section" ).click(function(e) {
-
-//    page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
-//        page.stop();
-//    });
-
-//    page.animate({ scrollTop: $(this).position().top }, 'slow', function(){
-//        page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-//    });
-
-//    return false; 
-// });
-
-
-
-
 function initMap() {
 	  	
-	    var uluru = {lat: 47.4926021, lng: 19.0611715};
+	    var uluru = {lat: 47.4926021, lng: 19.0632918};
 	    var map = new google.maps.Map(document.getElementById('integratedMap'), {
 	      zoom: 15,
 	      center: uluru,

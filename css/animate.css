@@ -13,18 +13,18 @@
     margin-left: 100vw;
     width: 0;
     height: 0;
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
     -ms-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
     margin-left:0;
     width: 44vw;
     height: 91vh;
@@ -32,21 +32,21 @@
 }
 @keyframes rotating {
   from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    margin-left: 100vw;
-    width: 0;
-    height: 0;
-  }
-  to {
     -ms-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+    margin-left: 100vw;
+    width: 0;
+    height: 0;
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
     margin-left:0;
     width: 44vw;
     height: 91vh;
@@ -177,7 +177,7 @@
     margin-right: -9vw;
   }
 
-  25%{margin-right:0;}
+  10%{margin-right:0;}
   48%{ /*width: 9.406vw; */
     opacity: 1;
   }
@@ -199,11 +199,11 @@
 }
 
   .photoAnimation {
-  -webkit-animation: photo 3s  linear 1;
-  -moz-animation: photo 3s  linear 1;
-  -ms-animation: photo 3s linear 1;
-  -o-animation: photo 3s  linear 1;
-  animation: photo 3s linear 1;
+  -webkit-animation: photo 1.8s  linear 1;
+  -moz-animation: photo 1.8s  linear 1;
+  -ms-animation: photo 1.8s linear 1;
+  -o-animation: photo 1.8s  linear 1;
+  animation: photo 1.8s linear 1;
 }
 
 
