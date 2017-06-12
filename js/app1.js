@@ -80,17 +80,21 @@ app.controller('AppartmentController',
 		$scope.toggleTopMenu = function () {
 			// body...
 			$scope.toggle = !$scope.toggle;
+			window.location.pathname='/';
 		};
 
 		$scope.numbersArray = [1,2,3,4,5,6,7,8];
 
 		$scope.slider =  new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        paginationClickable: true,
-        autoplay: 2500,
-        spaceBetween: 30,
-        loop: true
-    });
+	        pagination: '.swiper-pagination',
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        slidesPerView: 1,
+	        paginationClickable: true,
+	        autoplay: 2500,
+	        spaceBetween: 30,
+	        loop: true
+	    });
 		 $scope.$watch('$viewContentLoaded', function(){
 		    $scope.numbersArray.forEach( function(element, index) {
 		    	setTimeout(function() {

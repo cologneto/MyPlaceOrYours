@@ -89,6 +89,8 @@ app.controller('AppartmentController',
 		$scope.toggleTopMenu = function () {
 			// body...
 			$scope.toggle = !$scope.toggle;
+			window.location.pathname='/';
+			console.log('aaaaaaaaaaaa');
 		};
 
 		$scope.numbersArray = [1,2,3,4,5,6,7,8];

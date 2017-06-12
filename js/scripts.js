@@ -191,21 +191,61 @@ var scrollEventCounter = 0;
 var lastScrollTop = 0;
 var photoGirlImg = $(".photoGirl").children();
 
+function loading() {
+  $('#loading').fadeOut('slow');
+  $('header').removeClass('hide');
+}
+
+$(window).load(function() {
+  
+  
+});
 // .first().offset().top;
-
-
+/*$.ajax({
+  xhr: function()
+  {
+    var xhr = new window.XMLHttpRequest();
+    //Upload progress
+    xhr.upload.addEventListener("progress", function(evt){
+      if (evt.lengthComputable) {
+        var percentComplete = evt.loaded / evt.total;
+        //Do something with upload progress
+        console.log(percentComplete);
+      }
+    }, false);
+    //Download progress
+    xhr.addEventListener("progress", function(evt){
+      if (evt.lengthComputable) {
+        var percentComplete = evt.loaded / evt.total;
+        //Do something with download progress
+        console.log(percentComplete*100);
+      }
+    }, false);
+    return xhr;
+  },
+  type: 'POST',
+  url: "/video/myplace_last.mp4",
+  data: {},
+  success: function(data){
+    //Do something success-ish
+    console.log("ajax ready");
+  }
+});
+*/
 function ShowHideMenuNavigation(x) {
     x.classList.toggle("change");
-    $(".navMenuContainer").toggle("hidden");
-    if ($(".navMenuContainer").hasClass("hidden")) {
-        $(".navMenuContainer").removeClass("hidden");
-    }
-    else {
-       $(".navMenuContainer").addClass("hidden"); 
-    }
+    $(".navMenuContainer").toggleClass("hidden");
+    
 }
 
 $(document).ready(function() {
+  var video = document.getElementById('video');
+
+  video.addEventListener('loadeddata', function() {
+    console.log("video can be played");
+    setTimeout(loading, 1000);
+  }, true);
+
   var bookATransferForm = $('.bookATransferForm');
   bookATransferForm.addClass("hide");
   $('.expandable').on('click', function(event) {
@@ -217,8 +257,17 @@ $(document).ready(function() {
       bookATransferForm.addClass("hide");
       $(this).children('div').text('+');
     }
+    
   });;
-  
+  $(".aboutSectionText").on('mouseenter', function(event) {
+      event.preventDefault();
+      console.log("aaaaaaaaaaaaa");
+      $(".photoGirl").children().removeClass('photoAnimation');
+      setTimeout(function () {
+        //do something once.
+        $(".photoGirl").children().addClass("photoAnimation");
+      }, 1000);
+    });
 
   $("#homeButton").on("click", function() {
     // body...
@@ -228,7 +277,7 @@ $(document).ready(function() {
   })
   $('#fullpage').fullpage({
     verticalCentered: false,
-    anchors: ['firstPage', 'secondPage','3rdPage','4thpage'],
+    anchors: ['homePage', 'about','ourAp','how'],
     menu: '#menu',
     afterLoad: function(anchorLink, index){
       var loadedSection = $(this);
@@ -240,7 +289,7 @@ $(document).ready(function() {
       }
 
       //using anchorLink
-      if(anchorLink == '3rdPage'){
+      if(anchorLink == 'ourAp'){
         $(".apartmentOne").addClass("apartAnimation1").css('background-image', 'url(images/homePage/ap1.jpg)');
         $(".apartmentTwo").addClass("apartAnimation2").css('background-image', 'url(images/homePage/ap2.jpg)');
         $(".apartmentThree").addClass("apartAnimation3").css('background-image', 'url(images/homePage/ap3.jpg)');

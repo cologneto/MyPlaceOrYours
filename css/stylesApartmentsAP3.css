@@ -121,6 +121,11 @@ section {
 	height: 100vh;
 }
 
+.picContainerCenter {
+	width: 50%;
+	height: 50vh !important;
+}
+
 .pic1, .pic2, .pic3, .pic4, .pic6, .pic5 {
 	width: 100%;
 	background-size: 100% 100%;
@@ -378,11 +383,11 @@ section {
 
 
 #movingFurnitureContainer .image {
-	top: 5vh;
-	right: 10vw;
-	width: 42vw;
-	height: 49vh;
-	background-image: url("../images/AppartmentOne/photo-2.jpg"); 
+	top: -5vh;
+    right: 10vw;
+    width: 18vw;
+    height: 64vh;
+	background-image: url("../images/ApartmentThree/photo2.jpg"); 
 	background-size: 100% 100%;
 }
 
@@ -434,8 +439,7 @@ section {
 }
 
 .smallDetailsText {
-	left: 0%;
-	bottom: -40%;
+	padding-left: 8%;
 	font-family: "Tw Cen MT";
 	font-size: 4.7vh;
 	color: #636363;
@@ -453,7 +457,7 @@ section {
 
 
 #picAndSliderContainer {
-	padding: 16vh 8vw;
+	padding: 0 8vw 16vh 8vw;
 	width: 100%;
 	height: inherit;
 	margin: 0 !important;
@@ -468,6 +472,7 @@ section {
 	background-image:  url('../images/AppartmentOne/top-picture-of-slideshow.jpg');
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
+	top:57vh;
 }
 
 .backSize100 {
@@ -476,32 +481,33 @@ section {
 }
 
 .swiper-container {
-	height: 52vh;
-	width: 40vw;
+    height: 62vh;
+    width: 50vw;
+    z-index: 1000;
 }
 
 .ap1sl1 {
-	background-image: url('../images/AppartmentOne/top-picture-of-slideshow.jpg');
+	background-image: url('../images/ApartmentThree/big1.jpg');
 }
 
 .ap1sl2 {
-	background-image: url('../images/AppartmentOne/big2.jpg');
+	background-image: url('../images/ApartmentThree/big2.jpg');
 }
 .ap1sl3 {
-	background-image: url('../images/AppartmentOne/big3.jpg');
+	background-image: url('../images/ApartmentThree/big3.jpg');
 }
 .ap1sl4 {
-	background-image: url('../images/AppartmentOne/big4.jpg');
+	background-image: url('../images/ApartmentThree/big4.jpg');
 }
 .ap1sl5 {
-	background-image: url('../images/AppartmentOne/big5.jpg');
+	background-image: url('../images/ApartmentThree/big5.jpg');
 }
 .ap1sl6 {
-	background-image: url('../images/AppartmentOne/big6.jpg');
+	background-image: url('../images/ApartmentThree/big6.jpg');
 }
 
 .ap1sl7 {
-	background-image: url('../images/AppartmentOne/big7.jpg');
+	background-image: url('../images/ApartmentThree/big7.jpg');
 }
 
 .ap1sl8 {
@@ -514,15 +520,15 @@ section {
 
 .imageRight	{
 	height: 51vh;
-	width: 37.4vw;
-	background-image:  url('../images/AppartmentOne/photo-3.jpg');
+	width: 14vw;
+	background-image:  url('../images/ApartmentThree/mirror.png');
 	background-size: 100% 100%;
 	bottom: 6vh;
 	right: 0;
 }
 
 .fbButton {
-	bottom: 6vh;
+	bottom: -5vh;
 	left: 0;
 	width: 40vw;
 	height: 5.9vh;
@@ -533,8 +539,20 @@ section {
 	font-size: 2.9vh;
 	cursor: pointer;
 	padding-top: 0.74vh;
+	z-index: 1001;
+}
+.lastSection {
+	height: 130vh;
 }
 
+.lamp {
+	left: 30vw;
+	top: 0;
+	background-image: url('../images/ApartmentThree/lamp.png');
+	width: 15vw;
+	height: 45vh;
+	background-size: 100% 100%;
+}
 
 
 /*=============================================================*/

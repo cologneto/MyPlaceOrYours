@@ -12,21 +12,28 @@
 	</style>
 </head>
 <body>
+	<div id="loading">
+		<div class="contaner-loading">
+			<div class="gifImage positionAbsolute"></div>
+			<div class="circle positionAbsolute"></div>
+			<div id="loadingText"></div>
+		</div>
+	</div>
 	<!-- <a name="home"></a> -->
 	<!-- HEADER -->
-	<header>
+	<header class="hide">
 		<div class="navbar-fixed-top">
 			<div id="homeButton" class="blackBackground">
-				<a href="#firstPage">
+				<a href="#homePage">
 					<img src="images/homePage/keys-sign.png" alt="keys-sign">
 				</a>
 			</div>
 			<div class="navMenuContainer hidden">	
 				<nav id="navigation">
 			            <ul class="centerBlock">
-			                <li data-menuanchor="secondPage"><a href="#secondPage" class="nav-link">ABOUT</a></li>
-			                <li data-menuanchor="3rdPage"><a href="#3rdPage" class="nav-link">OUR APPARTMENTS</a></li>
-			                <li data-menuanchor="4thpage"><a href="#4thpage" class="nav-link">HOW TO FIND US?</a></li>
+			                <li data-menuanchor="about"><a href="#about" class="nav-link">ABOUT</a></li>
+			                <li data-menuanchor="ourAp"><a href="#ourAp" class="nav-link">OUR APPARTMENTS</a></li>
+			                <li data-menuanchor="how"><a href="#how" class="nav-link">HOW TO FIND US?</a></li>
 			            </ul>
 		    	</nav>	
 	    	</div>
@@ -64,7 +71,7 @@
 <div class="section">
 	<section style="overflow: hidden;" class="">
 	<div id="home" class=""></div>
-		<video data-autoplay data-keepplaying loop>
+		<video id="video" data-autoplay data-keepplaying loop>
         	<source src="video/myplace_last.mp4" type="video/mp4" />
 		</video>
 		<div class="container-fluid homeContainer">
@@ -204,7 +211,7 @@
 						<div class="apartmentThree">
 							
 							<div class="blackOpacity relativePosition">
-								<div class="stepIn ap3stepIn">
+								<div class="stepIn ap3stepIn" onclick="window.location.pathname='/apartment3.html';">
 									<p>Step in >></p>
 								</div>	
 								<div class="specialBorderRectangleAp3">
@@ -220,7 +227,7 @@
 						</div>
 						<div class="apartmentTwo">
 							<div class="blackOpacity relativePosition">
-								<div class="stepIn ap2stepIn">
+								<div onclick="window.location.pathname='/apartment2.html';" class="stepIn ap2stepIn">
 									<p>Step in >></p>
 								</div>
 								<div class="specialBorderRectangleAp2">
@@ -238,7 +245,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-6 rightColumn">
 						<div class="apartmentOne">
 							<div class="blackOpacity relativePosition">
-								<div class="stepIn ap1stepIn">
+								<div onclick="window.location.pathname='/apartment1.html';" class="stepIn ap1stepIn">
 									<p>Step in >></p>
 								</div>
 								<div class="apartmentText textAnimation">
@@ -350,7 +357,7 @@
 						<div class="col-lg-8 col-md-8 col-sm-8">
 							<div class="container-fluid">
 								<div class="row marginBottom4vh">
-									<div class="col-lg-4 col-md-2 col-sm-2 bookATransfer">Book a Transfer</div>
+									<div class="col-lg-4 col-md-2 col-sm-2 bookATransfer marginLeftMinus20">Book a Transfer</div>
 									<div class="col-lg-8 col-md-8 col-sm-8">
 										<div class="line">
 											<div class="expandable">
@@ -460,6 +467,23 @@
 								
 							</div>
 						</div>
+						<div class="relativePosition footerTriangleContainer">
+							<div class="triangle">
+								<div class="triangleDownFooter triangleMarginLeft"></div>
+								<div class="triangleDownFooter triangleMarginRight"></div>
+							</div>
+						</div>
+						<div id="footer"  class="row">
+
+							<div id="footerLogo"></div>
+							<div class="footerText">
+								<div class="footerTextLeft">© 2017 | My Place or Yours?</div>
+								<div class="footerTextRight">Web Design by <strong>D-Zen Studio</strong></div>
+							</div>
+							<div id="footerImage">
+								
+							</div>
+						</div>
 					</div>
 		</section>
 	</div>
@@ -468,6 +492,8 @@
 	<script type="text/javascript" src="js/jquery.easings.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/validator.js"></script>
 	<script type="text/javascript" src="js/swiper.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script async defer
