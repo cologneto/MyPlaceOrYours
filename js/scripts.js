@@ -243,8 +243,22 @@ $(document).ready(function() {
 
   video.addEventListener('loadeddata', function() {
     console.log("video can be played");
-    setTimeout(loading, 1000);
+    setTimeout(loading, 5000);
   }, true);
+
+  //Time picker
+  $('#timepicker').wickedpicker();
+  //Date picker
+  $('#datetimepicker2').datetimepicker({ 
+  //yearOffset:,
+    theme:'dark',
+    lang:'en',
+    timepicker:false,
+    format:'d/m/Y',
+    formatDate:'Y/m/d',
+    minDate: -3 // yesterday is minimum date
+    
+  });
 
   var bookATransferForm = $('.bookATransferForm');
   bookATransferForm.addClass("hide");
@@ -274,8 +288,12 @@ $(document).ready(function() {
      $("body, html").animate({ 
       scrollTop: 0 
     }, 1500);
-  })
-  $('#fullpage').fullpage({
+  });
+  createFullpageCss();
+
+  function createFullpageCss(argument) {
+    // body...
+    $('#fullpage').fullpage({
     verticalCentered: false,
     anchors: ['homePage', 'about','ourAp','how'],
     menu: '#menu',
@@ -293,10 +311,20 @@ $(document).ready(function() {
         $(".apartmentOne").addClass("apartAnimation1").css('background-image', 'url(images/homePage/ap1.jpg)');
         $(".apartmentTwo").addClass("apartAnimation2").css('background-image', 'url(images/homePage/ap2.jpg)');
         $(".apartmentThree").addClass("apartAnimation3").css('background-image', 'url(images/homePage/ap3.jpg)');
+        console.log($(this));
       }
+      if (anchorLink == undefined) {
+            console.log(anchorLink);
+            destroy("all");
+      }
+
+      console.log(anchorLink);
+
     }
 
   });
+  }
+  
 });
 
 /*'3rdPage', '4thpage', '5thpage','6thpage','7thpage','8thpage','9thpage'*/
@@ -342,12 +370,6 @@ $(document).on("scroll", function(e){
      
   }
 });
-
-$(".stepIn").on("click", function() {
-  var local = window.location.href;
-  window.location.href = local + "apartment1.html"
-})
-
 
 function initMap() {
 	  	

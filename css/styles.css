@@ -944,6 +944,8 @@ a.nav-link:active
 
 .abc {
   color: #bdbdbd;
+  font-size: 2.8vh;
+  line-height: 1;
 }
 
 .triangleDownHTFU {
