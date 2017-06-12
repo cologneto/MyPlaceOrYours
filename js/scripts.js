@@ -240,7 +240,14 @@ function ShowHideMenuNavigation(x) {
 
 $(document).ready(function() {
   var video = document.getElementById('video');
-
+  $('#contactUs').on('scroll', function () {
+    // body...
+    if($('#contactUs').scrollTop() == 0) {
+      window.location.href="file:///C:/GitRepositories/MyPlaceOrYours/index.html#how";
+    }
+    
+  })
+  
   video.addEventListener('loadeddata', function() {
     console.log("video can be played");
     setTimeout(loading, 5000);
